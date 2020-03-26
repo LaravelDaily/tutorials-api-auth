@@ -4,6 +4,22 @@ import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
+const guest = (to, from, next) => {
+  if (!localStorage.getItem('authToken')) {
+    return next()
+  } else {
+    return next('/')
+  }
+}
+const auth = (to, from, next) => {
+  // Solve a bug where user isn't yet loaded but the app runs
+  if (localStorage.getItem('authToken')) {
+    return next()
+  } else {
+    return next('/login')
+  }
+}
+
 const routes = [
   {
     path: '/',
@@ -11,12 +27,16 @@ const routes = [
     component: Home
   },
   {
+    path: '/login',
+    name: 'Login',
+    beforeEnter: guest,
+    component: () => import(/* webpackChunkName: "login" */ '../views/Login.vue')
+  },
+  {
     path: '/users',
     name: 'Users',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Users.vue')
+    beforeEnter: auth,
+    component: () => import(/* webpackChunkName: "users" */ '../views/Users.vue')
   }
 ]
 
