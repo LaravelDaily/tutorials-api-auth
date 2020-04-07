@@ -33,7 +33,7 @@ To set up public API test you'll need to follow these steps:
 - Run `npm install` - this takes a while
 - Copy `.env.example` to `.env.development.local`
 - Fill out details: `VUE_APP_API_URL` should point to: `YOURDOMAIN/api/v1/` (replace YOURDOMAIN with the domain you set up for the API)
-- Run `npm serve` and open the given address (should look something like: `http://localhost:808*` where * is number from 0 to 9)
+- Run `npm run serve` and open the given address (should look something like: `http://localhost:808*` where * is number from 0 to 9)
 - Visit `Users list` in the loaded page and you should see the data.
 
 # Demo/Sanctum branch - Laravel sanctum protected
@@ -52,7 +52,7 @@ To set up sanctum API test you'll need to follow these steps:
 - Run `npm install` - this takes a while
 - Copy `.env.example` to `.env.development.local`
 - Fill out details: `VUE_APP_API_URL` should point to: `YOURDOMAIN/api/v1/` (replace YOURDOMAIN with the domain you set up for the API)
-- Run `npm serve` and open the given address (should look something like: `http://localhost:808*` where * is number from 0 to 9)
+- Run `npm run serve` and open the given address (should look something like: `http://localhost:808*` where * is number from 0 to 9)
 - You should see Home and Login navigation buttons on the page.
 - Click on login and login using these details `admin@admin.com` with password `password`
 - Users list should appear
@@ -74,7 +74,7 @@ To set up passport API test you'll need to follow these steps:
 - Run `npm install` - this takes a while
 - Copy `.env.example` to `.env.development.local`
 - Fill out details: `VUE_APP_API_URL` should point to: `YOURDOMAIN/api/v1/` (replace YOURDOMAIN with the domain you set up for the API)
-- Run `npm serve` and open the given address (should look something like: `http://localhost:808*` where * is number from 0 to 9)
+- Run `npm run serve` and open the given address (should look something like: `http://localhost:808*` where * is number from 0 to 9)
 - You should see Home and Login navigation buttons on the page.
 - Click on login and login using these details `admin@admin.com` with password `password`
 - Users list should appear
@@ -101,7 +101,7 @@ To set up public API test you'll need to follow these steps:
 - `VUE_APP_AUTH_URL` should point to: `YOURDOMAIN/oauth/token` (replace YOURDOMAIN with the domain you set up for the API)
 - `VUE_APP_API_CLIENT_ID` should be set to database `id` column from table: `oauth_clients` where `password_client` is equal to `1`
 - `VUE_APP_API_CLIENT_SECRET` should be set to database `secret` column from table: `oath_clients` where `password_client` is equal to 1
-- Run `npm serve` and open the given address (should look something like: `http://localhost:808*` where * is number from 0 to 9)
+- Run `npm run serve` and open the given address (should look something like: `http://localhost:808*` where * is number from 0 to 9)
 - You should see Home and Login navigation buttons on the page.
 - Click on login and login using these details `admin@admin.com` with password `password`
 - Users list should appear
