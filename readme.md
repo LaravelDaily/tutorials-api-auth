@@ -1,5 +1,13 @@
 # About
-**TBD...**
+Demo-project with Laravel and Vue.js to show four ways of authentication:
+
+- Public (so no Auth)
+- Laravel Sanctum
+- Laravel Passport
+- Laravel Passport with oAuth
+
+
+- - - - - -
 
 # Setting up Laravel API
 Base setup for our Laravel API is the same across all of the branches.
